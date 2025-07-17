@@ -2,7 +2,7 @@
 #                                  Project Name                                #
 # **************************************************************************** #
 
-NAME = libftprintf.a
+NAME = libft.a
 
 # **************************************************************************** #
 #                             Compiler & Commands                              #
@@ -40,8 +40,8 @@ C_LOGO		= 96m
 #                                 Directories                                  #
 # **************************************************************************** #
 
-SRC_DIR		= src/
-INCLUDE_DIR	= includes/
+SRC_DIR		= ./
+INCLUDE_DIR	= ./
 BUILD_DIR	= .build/
 GNL_DIR		= gnl/
 PRINTF_DIR	= printf/
@@ -52,7 +52,8 @@ PRINTF_DIR	= printf/
 
 FILES		+= ft_isalpha ft_isdigit ft_isalnum ft_isascii ft_isprint
 FILES		+= ft_memset ft_bzero ft_memcpy ft_memmove ft_memchr ft_memcmp
-FILES		+= ft_strlen ft_strlcpy ft_strlcat ft_toupper ft_tolower
+FILES		+= ft_strlen
+FILES		+= ft_strlcpy ft_strlcat ft_toupper ft_tolower
 FILES		+= ft_strchr ft_strrchr ft_strncmp ft_strnstr ft_atoi
 FILES		+= ft_calloc ft_strdup ft_substr ft_strjoin ft_strtrim
 FILES		+= ft_split ft_itoa

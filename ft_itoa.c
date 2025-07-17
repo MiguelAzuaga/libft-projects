@@ -6,13 +6,13 @@
 /*   By: mqueiros <mqueiros@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 12:19:39 by mqueiros          #+#    #+#             */
-/*   Updated: 2025/04/16 11:18:57 by mqueiros         ###   ########.fr       */
+/*   Updated: 2025/07/17 05:48:15 by mqueiros         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*ft_putnbr(char *s, int n, int size)
+static char	*ft_putnum(char *s, int n, int size)
 {
 	int	i;
 
@@ -57,5 +57,5 @@ char	*ft_itoa(int n)
 	dst = malloc ((n_len + 1) * sizeof(char));
 	if (!dst)
 		return (NULL);
-	return (ft_putnbr(dst, n, n_len));
+	return (ft_putnum(dst, n, n_len));
 }

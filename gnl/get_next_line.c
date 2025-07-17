@@ -6,33 +6,17 @@
 /*   By: mqueiros <mqueiros@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 11:09:06 by jdecorte          #+#    #+#             */
-/*   Updated: 2025/07/17 03:43:36 by mqueiros         ###   ########.fr       */
+/*   Updated: 2025/07/17 07:03:59 by mqueiros         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "../libft.h"
 
 char	*ft_free_gnl(char *str)
 {
 	if (str)
 		free(str);
 	return (NULL);
-}
-
-static ssize_t	ft_charpos(char *str, int c)
-{
-	size_t	i;
-
-	i = 0;
-	if (!str)
-		return (-1);
-	while (str[i])
-	{
-		if (str[i] == c)
-			return (i);
-		i++;
-	}
-	return (-1);
 }
 
 static char	*ft_strnjoin_free(char *s1, char *s2, size_t s2_len)
@@ -59,6 +43,22 @@ static char	*ft_strnjoin_free(char *s1, char *s2, size_t s2_len)
 	dst[i] = '\0';
 	free(s1);
 	return (dst);
+}
+
+ssize_t	ft_charpos(char *str, int c)
+{
+	size_t	i;
+
+	i = 0;
+	if (!str)
+		return (-1);
+	while (str[i])
+	{
+		if (str[i] == c)
+			return (i);
+		i++;
+	}
+	return (-1);
 }
 
 static char	*ft_read_line(int fd, char *buffer, char *line)

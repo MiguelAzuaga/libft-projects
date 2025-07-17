@@ -6,11 +6,11 @@
 /*   By: mqueiros <mqueiros@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 11:31:35 by mqueiros          #+#    #+#             */
-/*   Updated: 2025/07/17 03:30:01 by mqueiros         ###   ########.fr       */
+/*   Updated: 2025/07/17 07:03:55 by mqueiros         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../libft.h"
 
 int	ft_putchar(char c)
 {

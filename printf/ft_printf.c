@@ -6,11 +6,12 @@
 /*   By: mqueiros <mqueiros@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 10:26:24 by mqueiros          #+#    #+#             */
-/*   Updated: 2025/07/17 03:30:04 by mqueiros         ###   ########.fr       */
+/*   Updated: 2025/07/17 07:04:04 by mqueiros         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../libft.h"
+#include <stdarg.h>
 
 int	ft_putflag(va_list args, const char c)
 {

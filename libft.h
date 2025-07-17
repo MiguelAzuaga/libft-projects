@@ -6,7 +6,7 @@
 /*   By: mqueiros <mqueiros@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 14:19:56 by mqueiros          #+#    #+#             */
-/*   Updated: 2025/07/17 03:50:04 by mqueiros         ###   ########.fr       */
+/*   Updated: 2025/07/17 05:55:53 by mqueiros         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,13 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+# include <unistd.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1000
+# endif
+
+# define FD_MAX 1024
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -68,5 +75,18 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+// --- PRINTF -- //
+
+int		ft_printf(const char *str, ...);
+int		ft_putchar(char c);
+int		ft_putstr(char *str);
+int		ft_putptr(void *pointer);
+int		ft_putnbr(long num, int is_unsigned);
+int		ft_puthex(unsigned long num, int lowercase);
+
+// --- GNL --- //
+
+char	*get_next_line(int fd);
 
 #endif
